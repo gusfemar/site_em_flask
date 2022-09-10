@@ -17,20 +17,24 @@
 
     function verifica() {
 
-        if (resposta == numero_sorteado)
+        if (numero_sorteado == resposta) {
 
             alert("Você acertou!!!")
 
-        else
+        }
+
+        else {
 
             alert("Você errou!!!")
 
+        }
+
     }
 
-    numero_sorteado = sorteia();
+    numero_sorteado = sorteia()
     var resposta = document.querySelector("input");
-    input.focus();
-    verifica();
+    resposta.focus();
 
+    verifica();
 
 </script>
