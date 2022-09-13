@@ -5,7 +5,7 @@
 <body onclick="get_focus();">
 
     <h1>Jogo da adivinhação</h1>
-    <input id="my_text_field" value="Campo de texto" /> <button>Verificar</button>
+    <input id="my_text_field" /> <button>Verificar</button>
 
 </body>
 
@@ -42,7 +42,6 @@
     }
 
     var numero_sorteado = sorteia();
-    alert(numero_sorteado);
     var input = document.querySelector("input");
     input.value = "";
     var button = document.querySelector("button");
