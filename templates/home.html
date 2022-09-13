@@ -17,7 +17,7 @@
 
     function verifica() {
 
-        if (numero_sorteado == resposta) {
+        if (resposta.value == numero_sorteado) {
 
             alert("Você acertou!!!")
 
@@ -31,10 +31,11 @@
 
     }
 
-    numero_sorteado = sorteia()
+    var numero_sorteado = sorteia();
+    alert(numero_sorteado);
     var resposta = document.querySelector("input");
     resposta.focus();
-
-    verifica();
+    var button = document.querySelector("button");
+    button.onclick = verifica;
 
 </script>
