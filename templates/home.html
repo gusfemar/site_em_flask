@@ -2,8 +2,12 @@
 
 <html>
 
-<h1>Jogo da adivinhação</h1>
-<input /> <button>Verificar</button>
+<body onclick="get_focus();">
+
+    <h1>Jogo da adivinhação</h1>
+    <input id="my_text_field" value="Campo de texto" /> <button>Verificar</button>
+
+</body>
 
 </html>
 
@@ -17,7 +21,7 @@
 
     function verifica() {
 
-        if (resposta.value == numero_sorteado) {
+        if (input.value == numero_sorteado) {
 
             alert("Você acertou!!!")
 
@@ -31,10 +35,16 @@
 
     }
 
+    function get_focus() {
+
+        document.getElementById("my_text_field").focus();
+
+    }
+
     var numero_sorteado = sorteia();
     alert(numero_sorteado);
-    var resposta = document.querySelector("input");
-    resposta.focus();
+    var input = document.querySelector("input");
+    input.value = "";
     var button = document.querySelector("button");
     button.onclick = verifica;
 
